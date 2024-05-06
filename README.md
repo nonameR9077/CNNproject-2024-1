@@ -1,5 +1,5 @@
 ## quick instructions on datasets
-> 현재 tfds.load("emnist")가 작동하지 않음(사이트 리뉴얼로 인한 링크 corrupt로 추정)
+> 현재 `tfds.load("emnist")`가 작동하지 않음(사이트 리뉴얼로 인한 링크 corrupt로 추정)
 > 그래서 이 [링크](https://www.kaggle.com/datasets/crawford/emnist/download?datasetVersionNumber=3)로 직접 dataset을 받은 후
 > 해당 파일(archive.zip)을 `datasets/emnist`에 위치시켜야 함(압축 풀 필요 없음)
 

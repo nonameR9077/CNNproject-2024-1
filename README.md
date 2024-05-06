@@ -4,7 +4,7 @@
 > 해당 파일(archive.zip)을 `datasets/emnist`에 위치시켜야 함(압축 풀 필요 없음)
 
 TODO:
-- [ ] 큰 dataset(`byclass,bymerge`)는 `read_csv`로 처리 시 도중에 튕김
+- [ ] 큰 dataset(`byclass`,`bymerge`)는 `read_csv()`로 처리 시 도중에 튕김
 - [ ] resNet-50 시운전
 - [ ] 데이터 전처리
 

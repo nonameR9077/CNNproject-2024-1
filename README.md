@@ -1,10 +1,22 @@
 ## quick instructions on datasets
-> 현재 `tfds.load("emnist")`가 작동하지 않음(사이트 리뉴얼로 인한 링크 corrupt로 추정)
-> 그래서 이 [링크](https://www.kaggle.com/datasets/crawford/emnist/download?datasetVersionNumber=3)로 직접 dataset을 받은 후
-> 해당 파일(archive.zip)을 `datasets/emnist`에 위치시켜야 함(압축 풀 필요 없음)
+> ~~현재 `tfds.load("emnist")`가 작동하지 않음(사이트 리뉴얼로 인한 링크 corrupt로 추정)~~
+> ~~그래서 이 [링크](https://www.kaggle.com/datasets/crawford/emnist/download?datasetVersionNumber=3)로 직접 dataset을 받은 후~~
+> ~~해당 파일(archive.zip)을 `datasets/emnist`에 위치시켜야 함(압축 풀 필요 없음)~~/n
+>
+> 현재 `tfds.load("emnist")`가 잘 작동됨(URL이 update 됨). python console에서 `pip install --upgrade tfds-nightly`를 실행시킨 후(kernel 재시작 필요)
+> 정상적으로 사용하면 됨
+> 
+> ```
+> !pip install --upgrade tfds-nightly
+> import tensorflow_datasets as tfds
+> 
+> # 원하는 dataset을 부르면 됨. 예를 들어 bybalanced의 경우 "emnist/bybalanced"
+> my_emnist = tfds.load("emnist")
+> ```
 
 TODO:
-- [ ] 큰 dataset(`byclass`,`bymerge`)는 `read_csv()`로 처리 시 도중에 튕김
+- [ ] ~~큰 dataset(`byclass`,`bymerge`)는 `read_csv()`로 처리 시 도중에 튕김~~
+      해결됨. 
 - [ ] resNet-50 시운전
 - [ ] 데이터 전처리
 

@@ -1,12 +1,17 @@
 ## quick instructions on datasets
-> 현재 `tfds.load("emnist")`가 작동하지 않음(사이트 리뉴얼로 인한 링크 corrupt로 추정)
+> ~~현재 `tfds.load("emnist")`가 작동하지 않음(사이트 리뉴얼로 인한 링크 corrupt로 추정)
 > 그래서 이 [링크](https://www.kaggle.com/datasets/crawford/emnist/download?datasetVersionNumber=3)로 직접 dataset을 받은 후
-> 해당 파일(archive.zip)을 `datasets/emnist`에 위치시켜야 함(압축 풀 필요 없음)
+> 해당 파일(archive.zip)을 `datasets/emnist`에 위치시켜야 함(압축 풀 필요 없음)~~
+> 
+> 해결됨. 그냥 notebook 돌리셈
 
 TODO:
-- [ ] 큰 dataset(`byclass`,`bymerge`)는 `read_csv()`로 처리 시 도중에 튕김
-- [ ] resNet-50 시운전
-- [ ] 데이터 전처리
+- [ ] ~~큰 dataset(`byclass`,`bymerge`)는 `read_csv()`로 처리 시 도중에 튕김~~
+> `tf.load("mnist")`로 tensor를 load하면 됨
+- [x] resNet-50 시운전
+- [ ] 데이터 전처리 -> 증강?
+- [ ] fine-tune resNet50
+- [ ] pretrain model 사용과 아닌 model 사용 중 어느 것이 더 나은지 확인
 
 * * *
 ## 2024 ANN Project Guide

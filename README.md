@@ -13,6 +13,26 @@ TODO:
 - [ ] fine-tune resNet50
 - [ ] pretrain model 사용과 아닌 model 사용 중 어느 것이 더 나은지 확인
 
+## 공통
+- model의 학습 과정을 tensorboard로 시각화 및 정리(교재 notebook 참고)
+- model 저장 및 test evaluate 결과
+
+
+### LeNet5
+- batch_size, callbacks, activation functions 등을 변경해 가며 최적의 값을 도출
+- 현재 emnist 이미지는 (28,28) 인데, LeNet5는 (32,32)를 요구함. 현재는 `tf.keras.resize()`를 이용해 (32,32)로 stretch한 상태인데 그 대신
+  > `tf.pad` 을 이용해 끝부분에 padding 해여 (32,32)를 만들어 비교
+  > 
+  > model의 input_size를 (28,28,1)로 만들어 비교
+  >
+
+### ResNet50
+- 모델에 imagenet 가중치를 두고 하는 방식과 없이 하는 방식의 비교(각자 분담)
+  > feature extraction, fine-tuning
+  >
+  > 혹은 train from zero
+  > 
+
 * * *
 ## 2024 ANN Project Guide
 ### 주제: MNIST extended dataset을 이용한 CNN 모델 최적화 및 분석

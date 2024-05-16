@@ -6,6 +6,14 @@
 > 해결됨. 그냥 notebook 돌리셈
 
 TODO:
+1. preprocessing
+  - [ ] data augumentation: rotate은 그렇다 치는 데 crop, filp은 data integrity를 많이 헤칠 것 같음(추측)...
+    [tf api 참고](https://www.tensorflow.org/tutorials/images/data_augmentation)
+2. ResNet50
+   - [x] `tf.resize()` -> `tf.grayscale_to_rgb()`를 이용해 (224,224,3) 혹은 (28,28,3) 으로 조절 후 train
+    문제점: (224,224,3) 은 시간이 너무 걸림. 그리고 grayscale을 다시 rgb로 불리는 거는 뭔가 어불성설 같음
+   - [ ] ResNet50을 베이스로 아예 새 model를 제작. 즉 기본적으로는 output이 224 -> 112 -> 56 -> ... -> 7 -> 1(fc) 식으로 3 x 3 mask로 반씩 줄어드는데, 동일한 residual Network로 28 -> 14 -> 7 -> 1(fc) 으로 단순화(연구중)
+
 - [ ] ~~큰 dataset(`byclass`,`bymerge`)는 `read_csv()`로 처리 시 도중에 튕김~~
 > `tf.load("mnist")`로 tensor를 load하면 됨
 - [x] resNet-50 시운전
